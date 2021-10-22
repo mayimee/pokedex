@@ -61,7 +61,7 @@ export default function Pokedex() {
         try{
             setLoading(true);
 
-            const url = POKEMON_API_URL + "/?limit=898";
+            const url = POKEMON_API_URL + "/?limit=898&offset=40";
             const res = await axios.get(url);
 
             setLoading(false);
