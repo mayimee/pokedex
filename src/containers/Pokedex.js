@@ -51,9 +51,7 @@ export default function Pokedex() {
 
     const classes = useStyles();
     const [pokemonData, setPokemonData] = useState([]);
-
     const [searchPokemon, setSearchPokemon] = useState('');
-
     const [loading, setLoading] = useState(true);
 
     const getPokemon = async () => {
@@ -61,7 +59,7 @@ export default function Pokedex() {
         try{
             setLoading(true);
 
-            const url = POKEMON_API_URL + "/?limit=898&offset=40";
+            const url = POKEMON_API_URL + "/?limit=898";
             const res = await axios.get(url);
 
             setLoading(false);
@@ -131,7 +129,6 @@ export default function Pokedex() {
                 <Pagination 
                     count={23}
                     pageSize={20}
-                    
                 />
             </Stack>
         </Box>
