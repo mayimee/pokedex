@@ -79,6 +79,10 @@ const styles = (theme) => ({
         zIndex: 1000,
         textTransform: 'capitalize',
         color: 'white'
+    },
+    abilityModal: {
+        color: 'black',
+        textTransform: 'capitalize'
     }
 })
 
@@ -125,7 +129,7 @@ class PokemonDetails extends Component {
                     <Box className={classes.mainBox}>
                         <Box className={classes.pokedexContainer}>
                             <Box className={classes.pokemonImgContainer}>
-                                <img src={sprites.other.dream_world.front_default} alt={name} className={classes.imgPokemon} />
+                                <img src={sprites.other.dream_world.front_default ? sprites.other.dream_world.front_default : sprites.front_default} alt={name} className={classes.imgPokemon} />
                             </Box>
                             <Box className={classes.pokemonInfoContainer}>
                                 <Grid container>
@@ -184,7 +188,7 @@ class PokemonDetails extends Component {
                                             const {name} = pokemonAbility.ability;
 
                                             return (
-                                                <AbilityModal ability={name} > {name} </AbilityModal>
+                                                <AbilityModal ability={name} className={classes.abilityModal} > {name} </AbilityModal>
                                                 
                                             )
                                         })}
