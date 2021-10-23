@@ -126,7 +126,7 @@ class PokemonDetails extends Component {
             return(
                 <div>
                     <p className={classes.pokemonNavName}>Who's that Pokemon? It's <strong style={{color: 'yellow'}}>{name}</strong> !</p>
-                    <Box className={classes.mainBox}>
+                    <Box className={classes.mainBox} sm={12}>
                         <Box className={classes.pokedexContainer}>
                             <Box className={classes.pokemonImgContainer}>
                                 <img src={sprites.other.dream_world.front_default ? sprites.other.dream_world.front_default : sprites.front_default} alt={name} className={classes.imgPokemon} />
